@@ -1,5 +1,5 @@
 {
-  "name": "md-links-erikaoliveira",
+  "name": "md-links",
   "bin": {
     "md-links": "cli.js"
   },
@@ -11,6 +11,7 @@
     "CLI",
     "API"
   ],
+  "type": "commonjs",
   "author": "Erika Andrade de Oliveira <andraderika>",
   "license": "MIT",
   "engines": {
