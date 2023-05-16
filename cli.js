@@ -1,5 +1,5 @@
 const mdLinks = require('./index.js');
 
-mdLinks('arquivo/txt.md')
+mdLinks('arquivo/texto.md')
   .then(links => console.log(links))
   .catch(err => console.error(err));
