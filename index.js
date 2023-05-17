@@ -32,7 +32,7 @@ function mdLinks(pathFile, options = {}) {
           });
 
           if (options.validate){
-            const promises = extractLinks.map((link) =>{
+            const fetchRequests = extractLinks.map((link) =>{
               return fetch(link.href)
               .then((response) => {
                 link.status = response.status;
@@ -46,7 +46,7 @@ function mdLinks(pathFile, options = {}) {
               });
             });
 
-            Promise.all(promises)
+            Promise.all(fetchRequests)
             .then((result) => {
               if(options.stats){
                 const uniqueLinks = [...new Set(result.map((link) => link.href))];
@@ -64,7 +64,7 @@ function mdLinks(pathFile, options = {}) {
               reject(error);
             });
           } else if (options.validateAndStats) {
-            const promises = extractLinks.map((link) => {
+            const fetchRequests = extractLinks.map((link) => {
               return fetch(link.href)
                 .then((response) =>{
                   link.status = response.status;
@@ -78,7 +78,7 @@ function mdLinks(pathFile, options = {}) {
                 });
               });
 
-              Promise.all(promises)
+              Promise.all(fetchRequests)
               .then((result) => {
                 const uniqueLinks = [... new Set(result.map((link) => link.href))];
                 const stats = {

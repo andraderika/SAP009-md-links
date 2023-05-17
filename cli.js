@@ -1,14 +1,14 @@
-
+#!/usr/bin/env node
 const chalk = require('chalk');
-const { mdLinks, validateAndStats } = require('./index');
+const mdLinks = require('./index.js');
 const path = require('path');
 
 const pathFile = process.argv[2];
 const options = {
   validate: process.argv.includes('--validate') || process.argv.includes('-v'),
   stats: process.argv.includes('--stats') || process.argv.includes('-s'),
-  validateAndStats: process.argv.includes('--validate') && process.argv.includes('--stats'),};
-
+  validateAndStats: process.argv.includes('--validate') && process.argv.includes('--stats'),
+};
 
 function printLinks(links) {
   links.forEach((link) => {
@@ -21,7 +21,7 @@ function printLinks(links) {
 }
 
 if (options.validateAndStats) {
-  validateAndStats(pathFile, options)
+  mdLinks(pathFile, options)
   .then((result) => {
     console.log(chalk.blue(`Total: ${result.total}`));
     console.log(chalk.cyan(`Unique: ${result.unique}`));
@@ -44,7 +44,7 @@ if (options.validateAndStats) {
       console.log(chalk.blue(`Total: ${result.total}`));
       console.log(chalk.cyan(`Unique: ${result.unique}`));
     } else {
-      printLinks(result.links);
+      printLinks(result);
     }
   })
   .catch((error) => {
