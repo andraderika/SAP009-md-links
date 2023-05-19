@@ -4,7 +4,7 @@ const chalk = require('chalk');
 const fetch = require('node-fetch');
 
 function mdLinks(pathFile, options = {}) {
-  /* Promisse: definem uma ação que vai ser
+  /* Promise: define uma ação que vai ser
     executada no futuro, ou seja, ela pode ser
     resolvida (resolve) ou rejeitada (reject). */
   return new Promise((resolve, reject) => {
@@ -19,14 +19,13 @@ function mdLinks(pathFile, options = {}) {
         if (err) {
           reject(err);
         } else {
-          const regex = /\[([^[\]]*?)\]\((https?:\/\/[^\s?#.].[^\s]*)\)/gm; // usada para extrair ou substituir porções de texto, endereço ou link etc
-          const searchLinks = data.match(regex) || [];
+          const regex = /\[(.*?)\]\((https?:\/\/[^\s?#.].[^\s]*)\)/g; // usada para extrair ou substituir porções de texto, endereço ou link etc
+          const searchLinks = Array.from(data.matchAll(regex)) || [];
 
           const extractLinks = searchLinks.map(link => {
-            const [href, text] = link.match(/\((https?:\/\/[^\s?#.].[^\s]*)\)/);
             return {
-              href,
-              text,
+              href: link[2],
+              text: link[1],
               file: absolutePath,
             };
           });
