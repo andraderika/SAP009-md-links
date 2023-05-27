@@ -35,6 +35,7 @@ function mdLinks(pathFile, options = {}) {
               return fetch(link.href)
               .then((response) => {
                 link.status = response.status;
+                console.log(link.status, response)
                 link.statusText = response.statusText;
                 return link;
               })
@@ -94,7 +95,7 @@ function mdLinks(pathFile, options = {}) {
             if (options.stats){
               const uniqueLinks = [...new Set(extractLinks.map((link) => link.href))];
               const stats = {
-                total: link.lenght,
+                total: extractLinks.length,
                 unique: uniqueLinks.length,
               };
               resolve(stats);

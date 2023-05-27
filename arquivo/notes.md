@@ -2,7 +2,8 @@
 
 ***
 
-fs = File System [O que é fs](https://nodejs.dev/pt/learn/nodejs-file-paths/)[NOde.js](https://nodejs.reativa.dev/0046-node-module-fs/index)
+fs = File System [O que é fs](https://nodejs.dev/pt/learn/nodejs-file-paths/)
+[Node-js](https://nodejs.reativa.dev/0046-node-module-fs/index)
 
 Promisse: definem uma ação que vai ser executada no futuro, ou seja, ela pode ser resolvida (resolve) ou rejeitada (reject). [Entendendo Promisse](https://medium.com/trainingcenter/entendendo-promises-de-uma-vez-por-todas-32442ec725c2)
 
