@@ -35,7 +35,6 @@ function mdLinks(pathFile, options = {}) {
               return fetch(link.href)
               .then((response) => {
                 link.status = response.status;
-                console.log(link.status, response)
                 link.statusText = response.statusText;
                 return link;
               })
