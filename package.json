@@ -1,5 +1,5 @@
 {
-  "name": "md-links",
+  "name": "md-links-erikaoliveira",
   "bin": {
     "md-links": "cli.js"
   },
@@ -32,7 +32,8 @@
   },
   "dependencies": {
     "chalk": "^4.1.2",
-    "eslint": "^8.40.0"
+    "eslint": "^8.40.0",
+    "node-fetch": "^2.6.11"
   },
   "main": "index.js",
   "directories": {
