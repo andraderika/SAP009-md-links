@@ -25,7 +25,6 @@ if (options.validateAndStats) {
   .then((result) => {
     console.log(chalk.blue(`Total: ${result.total}`));
     console.log(chalk.cyan(`Unique: ${result.unique}`));
-    console.log(chalk.green(`OK: ${result.ok}`));
     console.log(chalk.red(`Broken: ${result.broken}`));
   })
   .catch((error) => {
