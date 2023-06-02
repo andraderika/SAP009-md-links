@@ -53,4 +53,4 @@ if (options.validateAndStats) {
       console.error(chalk.red(error.message));
     }
   });
-}
+} 
