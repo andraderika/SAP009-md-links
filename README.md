@@ -1,6 +1,6 @@
 # Markdown Links
 
-***
+
 <div align="center">
 
   <br>
@@ -13,15 +13,15 @@
   <br>
 </div>
 
-***
+
 
 ## Índice
 
-* [1. Prefácio](#1-prefacio) 🗒️
+* [1. Prefácio](#1-prefacio) 📃
 * [3. Instalação](#3-Instalação) 🔽
 * [4. Terminal e seus comandos](#4-Terminal-e-seus-comandos)💻
 
-***
+
 
 ## Prefácio
 
@@ -33,11 +33,11 @@ Desse modo, foi criada uma ferramenta usando o Node.js que lê e analisa arquivo
 
 *  `npm install md-links-erikaoliveira`
 
-***
+
 ## Terminal e seus comandos
 O usuário que utilizar a ferramenta desenvolvida, poderá localizar os links em um arquivo de interesse com o comando abaixo:
 * `md-links caminho-do-arquivo` </br>
-  </br><img alt="Ferramenta utilizada no caminho de arquivo ./folder/arquivo.md" width="850" src="https://user-images.githubusercontent.com/30864314/234978996-f6188a16-c883-4d90-9588-1de94dd23d71.png" /><br>
+  </br><img alt=""/><br>
 
 
 A segunda possibilidade de uso é inserir o comando --validate após o caminho do arquivo, para que assim a ferramenta informe os links que estão com erros.
@@ -61,13 +61,7 @@ A ferramenta está apta a tratar os erros, exemplo:
 
 </br><img alt="Exemplo de tratativas de erros" width="850" src="" /><br>
 
-***
-<br>
-  Desenvolvido por
-  <br>
 
-  <br> Erika Oliveira <br>
-  [Linkedin](https://www.linkedin.com/in/erikaoli/) | [Github](https://github.com/andraderika)
-  <br>
-  <br>
+## 👩🏻‍💻 Desenvolvido por:
+ Erika Oliveira | [Linkedin](https://www.linkedin.com/in/erikaoli/)
 
